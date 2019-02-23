@@ -52,8 +52,8 @@ X_train, X_val, Y_train, Y_val = train_test_split(X_train, Y_train, test_size = 
 model = Sequential()
 print(X_train.shape, Y_train.shape)
 
-model.add(Conv2D(filters = 32, kernal_size = (5,5), padding = 'same', activation = 'relu', input_shape = (28,28,1)))
-model.add(Conv2D(filters = 32, kernal_size = (5,5), padding = 'same', activation = 'relu'))
+model.add(Conv2D(filters = 32, kernel_size = (5,5), padding = 'same', activation = 'relu', input_shape = (28,28,1)))
+model.add(Conv2D(filters = 32, kernel_size = (5,5), padding = 'same', activation = 'relu'))
 model.add(MaxPool2D(pool_size = (2,2)))
 model.add(Dropout(0.25))
 
