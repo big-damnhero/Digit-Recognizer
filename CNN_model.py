@@ -70,7 +70,7 @@ model.add(Dense(10, activation = "softmax"))
 optimizer = RMSprop(lr=0.001, rho=0.9, epsilon=1e-08, decay=0.0)
 
 model.compile(optimizer = optimizer , loss = "categorical_crossentropy", metrics=["accuracy"])
-
+history = model.fit(X_train, Y_train,epochs= 1, validation_data=(X_val, Y_val))
 
 
 # Any results you write to the current directory are saved as output.
